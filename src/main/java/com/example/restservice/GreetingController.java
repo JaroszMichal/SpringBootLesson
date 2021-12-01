@@ -19,11 +19,13 @@ public class GreetingController {
 
     @PostMapping("/homework")
     public ConcatStringResponse concatStrings(@RequestBody StringsToConcatRequest stringsToConcat){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-mm-dd HH:mm:ss");
-        return new ConcatStringResponse(
-                stringsToConcat.getString1()+stringsToConcat.getString2(),
-                simpleDateFormat.format(new Date())
-        );
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+        StringBuilder sb = new StringBuilder();
+        sb
+                .append(stringsToConcat.getString1())
+                .append(" ")
+                .append(stringsToConcat.getString2());
+        return new ConcatStringResponse(sb.toString(), simpleDateFormat.format(new Date()));
     }
 
 
