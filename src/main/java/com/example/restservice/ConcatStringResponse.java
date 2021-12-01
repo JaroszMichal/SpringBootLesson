@@ -1,6 +1,6 @@
 package com.example.restservice;
 
-public class ConcatStrings {
+public class Answer {
 
     private final String string1;
     private final String string2;
@@ -13,13 +13,8 @@ public class ConcatStrings {
         return string2;
     }
 
-    public ConcatStrings(String string1, String string2) {
+    public Answer(String string1, String string2) {
         this.string1 = string1;
         this.string2 = string2;
     }
-
-    public String getConcat() {
-        return string1+" "+string2;
-    }
-
 }
