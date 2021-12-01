@@ -1,4 +1,5 @@
+com\example\restservice\ConcatStringResponse.class
 com\example\restservice\RestServiceApplication.class
 com\example\restservice\GreetingController.class
 com\example\restservice\Greeting.class
-com\example\restservice\ConcatStrings.class
+com\example\restservice\StringsToConcatRequest.class

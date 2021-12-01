@@ -1,20 +1,22 @@
 package com.example.restservice;
 
-public class Answer {
+import java.text.SimpleDateFormat;
+
+public class ConcatStringResponse {
 
     private final String string1;
-    private final String string2;
+    private final String date;
 
-    public String getString1() {
-        return string1;
-    }
-
-    public String getString2() {
-        return string2;
-    }
-
-    public Answer(String string1, String string2) {
+//    public SimpleDateFormat getDate() {
+//        return date;
+//    }
+//
+//    public String getString1() {
+//        return string1;
+//    }
+//
+    public ConcatStringResponse(String string1, String date) {
         this.string1 = string1;
-        this.string2 = string2;
+        this.date = date;
     }
 }

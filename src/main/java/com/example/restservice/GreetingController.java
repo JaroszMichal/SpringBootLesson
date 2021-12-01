@@ -1,5 +1,7 @@
 package com.example.restservice;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +17,13 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
-    @PostMapping("/greeting")
-    public String concatStrings(@RequestBody ConcatStrings concatStrings){
-        return concatStrings.getConcat();
+    @PostMapping("/homework")
+    public ConcatStringResponse concatStrings(@RequestBody StringsToConcatRequest stringsToConcat){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-mm-dd HH:mm:ss");
+        return new ConcatStringResponse(
+                stringsToConcat.getString1()+stringsToConcat.getString2(),
+                simpleDateFormat.format(new Date())
+        );
     }
 
 
